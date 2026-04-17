@@ -1,0 +1,24 @@
+<Project>
+  <ItemGroup>
+    <PackageReference Update="FluentValidation" Version="12.0.0" />
+    <PackageReference Update="FluentValidation.DependencyInjectionExtensions" Version="12.0.0" />
+    <PackageReference Update="Microsoft.ApplicationInsights.WorkerService" Version="2.23.0" />
+    <PackageReference Update="Microsoft.Azure.Functions.Worker" Version="2.0.0" />
+    <PackageReference Update="Microsoft.Azure.Functions.Worker.ApplicationInsights" Version="2.0.0" />
+    <PackageReference Update="Microsoft.Azure.Functions.Worker.Extensions.Http" Version="3.3.0" />
+    <PackageReference Update="Microsoft.Azure.Functions.Worker.Extensions.OpenApi" Version="1.6.0" />
+    <PackageReference Update="Microsoft.Azure.Functions.Worker.Sdk" Version="2.0.0" />
+    <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Update="Polly" Version="8.5.2" />
+    <PackageReference Update="coverlet.msbuild" Version="6.0.4" />
+    <PackageReference Update="xunit" Version="2.9.3" />
+    <PackageReference Update="xunit.runner.visualstudio" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(MSBuildProjectName)' == 'UnitTests' or '$(MSBuildProjectName)' == 'IntegrationTests'">
+    <PackageReference Update="coverlet.msbuild">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>

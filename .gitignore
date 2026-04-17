@@ -30,7 +30,9 @@ coverage/
 TestResults/
 
 # Local generated code/output folders (team-specific)
-generated/
+generated/*
+!generated/sample-azure-functions/
+!generated/sample-azure-functions/**
 
 # Keep sample requirements in artifacts, but ignore transient generated artifacts by default
 artifacts/*.auto.md

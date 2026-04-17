@@ -34,6 +34,10 @@ Automation scripts:
 
 Start from `artifacts/requirements-template.txt` and replace placeholders with real project details.
 
+In the Output requirements section, each team should set its own project folder name, for example:
+- `./generated/customer-docs-func`
+- `./generated/dealer-docs-func`
+
 For a quick trial, use:
 - `artifacts/sample-requirements.txt`
 
@@ -80,12 +84,12 @@ Examples:
 The generated code should be written to the path specified in the requirements file.
 
 In the current sample requirements, that path is:
-- `./generated/New1`
+- `./generated/sample-azure-functions`
 
 Expected generated solution layout:
 
 ```text
-./generated/New1/
+./generated/sample-azure-functions/
   src\
     Functions\
     Application\

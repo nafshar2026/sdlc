@@ -31,5 +31,5 @@ Testing and quality:
 - Ensure regex usage includes explicit match timeouts where applicable.
 
 Output requirements:
-- Generate the solution under ./generated/New1.
+- Generate the solution under ./generated/sample-azure-functions.
 - Include README documentation describing the solution structure, configuration, local run steps, and test execution.

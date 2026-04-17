@@ -3,11 +3,11 @@
 Use the following requirements and loaded skill context to generate a complete .NET 10 Azure Functions solution.
 
 ## Output Location
-./generated/New1
+./generated/sample-azure-functions
 
 ## Expected Solution Structure
 ```text
-./generated/New1\
+./generated/sample-azure-functions\
   src\
     Functions\
     Application\
@@ -56,7 +56,7 @@ Testing and quality:
 - Ensure regex usage includes explicit match timeouts where applicable.
 
 Output requirements:
-- Generate the solution under ./generated/New1.
+- Generate the solution under ./generated/sample-azure-functions.
 - Include README documentation describing the solution structure, configuration, local run steps, and test execution.
 
 ## Loaded Skill Context
@@ -172,7 +172,7 @@ Loaded count: 10
 
 # Output Target
 
-- Generate the .NET solution under a repo-relative path such as ./generated/New1.
+- Generate the .NET solution under a repo-relative path such as ./generated/sample-azure-functions.
 
 ## END SKILL-10-output-target.md
 
