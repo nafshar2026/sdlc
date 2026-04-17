@@ -13,6 +13,16 @@ cd sdlc
 
 All commands below assume you are running from the repository root.
 
+Read standards before generation work:
+- `standards/README.md`
+- `standards/AI-AGENT-GUARDRAILS.md`
+- `standards/SECURITY.md`
+
+Precedence rule:
+1. `standards/AI-AGENT-GUARDRAILS.md`
+2. Other files under `standards/`
+3. This Azure Functions workflow document
+
 ## What this process does
 
 1. Reads a requirements file.
@@ -164,5 +174,6 @@ as the direct input to your code generation tool.
 
 - `LOAD-ORDER.md` is only a manifest. It does not auto-load skills by itself.
 - `SKILL-MAP.json` controls automatic skill selection.
+- Enterprise standards in `./standards/` are mandatory and should be applied before skills guidance.
 - If your team writes requirements using different terminology, update `SKILL-MAP.json` so the correct skills are selected.
 - This repository prepares the generation context and prompt. The actual file creation under the target output path is performed by the downstream code generator.

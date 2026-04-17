@@ -11,6 +11,11 @@ git clone https://github.com/nafshar2026/sdlc.git
 cd sdlc
 ```
 
+Before running generation, read the enterprise standards pack:
+- ./standards/README.md
+- ./standards/AI-AGENT-GUARDRAILS.md
+- ./standards/SECURITY.md
+
 Then follow this end-to-end flow:
 1. Create a new requirements file from `artifacts/requirements-template.txt`.
 2. Set the output folder in that requirements file to a team-specific path such as `./generated/customer-docs-func`.
@@ -105,6 +110,10 @@ python ./skills/azure-functions-generation/scripts/load_skills.py --requirements
 8. Run tests and validation on the generated solution.
 
 ## Important Notes
+- Apply standards in this order:
+	1. `./standards/AI-AGENT-GUARDRAILS.md`
+	2. Other files in `./standards/`
+	3. Azure Functions skills files in this folder
 - LOAD-ORDER.md is only a manifest and does not load files by itself.
 - Skills are loaded only when your automation explicitly runs one of the loader scripts.
 - Auto-selection is heuristic and keyword-based; update ./SKILL-MAP.json when your requirement language changes.

@@ -2,6 +2,17 @@
 
 This file is now a top-level index. The instructions were split into modular skill files.
 
+## Enterprise Standards Pack
+- ./standards/README.md
+- ./standards/AI-AGENT-GUARDRAILS.md
+- ./standards/SECURITY.md
+- ./standards/API-SECURITY.md
+- ./standards/CODE-QUALITY.md
+- ./standards/TESTING.md
+- ./standards/DATA-HANDLING.md
+- ./standards/OBSERVABILITY.md
+- ./standards/ARCHITECTURE-PATTERNS.md
+
 ## Main Skills Pack
 - ./skills/azure-functions-generation/README.md
 - ./skills/azure-functions-generation/LOAD-ORDER.md
