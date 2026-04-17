@@ -1,0 +1,38 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Build and temp outputs
+bin/
+obj/
+out/
+tmp/
+temp/
+*.log
+
+# Coverage and test output
+coverage/
+.coverage
+*.coverage
+TestResults/
+
+# Local generated code/output folders (team-specific)
+generated/
+
+# Keep sample requirements in artifacts, but ignore transient generated artifacts by default
+artifacts/*.auto.md
+artifacts/skills-context.md
+artifacts/generation-prompt.md
