@@ -1,0 +1,35 @@
+Generate a production-ready .NET 10 Azure Functions solution using the isolated worker model.
+
+Architecture and structure:
+- Use Clean Architecture with separate Domain, Application, Infrastructure, and Functions trigger projects where appropriate.
+- Use feature folders for application behavior.
+- Keep Azure Functions trigger classes thin and move business logic into application handlers and services.
+- Application layer defines interfaces and Infrastructure implements them.
+- Domain layer must have zero external dependencies.
+
+Functional requirements:
+- Implement HTTP-triggered Azure Functions for customer document retrieval operations.
+- Support a metadata endpoint that returns available document entries for a customer account.
+- Support a file download endpoint that returns the requested document stream.
+- Validate all route and query inputs.
+- Reject invalid file names or path traversal attempts.
+
+Technical requirements:
+- Use FluentValidation for request validation.
+- Use Polly for retry handling around transient external operations.
+- Use Azure Application Insights for telemetry.
+- Use ILogger for structured logging.
+- Use Azure Key Vault with User Assigned Managed Identity for secrets.
+- Keep configuration in appsettings.json and appsettings.Development.json, with secrets resolved from environment or Key Vault.
+- Use OpenAPI support for documenting the HTTP-triggered functions.
+
+Testing and quality:
+- Add unit tests for validators and application handlers.
+- Add integration tests for HTTP-triggered function endpoints.
+- Use xUnit and FluentAssertions.
+- Produce SonarQube-compatible coverage output using coverlet.msbuild.
+- Ensure regex usage includes explicit match timeouts where applicable.
+
+Output requirements:
+- Generate the solution under ./generated/New1.
+- Include README documentation describing the solution structure, configuration, local run steps, and test execution.

@@ -1,0 +1,40 @@
+Project goal:
+- Describe the Azure Functions application to generate.
+- State the business capability in one or two sentences.
+
+Architecture and structure:
+- Specify whether to use separate Domain, Application, Infrastructure, and Functions trigger projects.
+- Specify any required architectural patterns such as Clean Architecture, CQRS, feature folders, repository pattern, or result pattern.
+- Specify any rules for dependency boundaries.
+
+Functional requirements:
+- List each function endpoint or trigger.
+- For each endpoint, define route, method, trigger type, input parameters, expected response, and error cases.
+- Describe validation rules for route, query, header, and body inputs.
+- Describe external systems or storage dependencies.
+
+Technical requirements:
+- List required packages or frameworks such as FluentValidation, Polly, OpenAPI, Application Insights.
+- Define configuration rules.
+- Define secret handling rules.
+- Define logging, resiliency, and observability requirements.
+
+Security requirements:
+- Define authentication and authorization requirements.
+- Define input hardening requirements such as path traversal prevention, regex timeout usage, or secret handling constraints.
+
+Testing and quality:
+- Define unit test expectations.
+- Define integration test expectations.
+- Define coverage tooling and CI requirements.
+
+Output requirements:
+- Generate the solution under a repo-relative path such as ./generated/<solution-name>.
+- Include README documentation for setup, local run, configuration, and tests.
+
+Expected solution structure:
+- src/
+- tests/
+- Directory.Build.props
+- Directory.Build.targets
+- README.md

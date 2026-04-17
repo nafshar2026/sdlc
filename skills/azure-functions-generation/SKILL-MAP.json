@@ -1,0 +1,55 @@
+{
+  "defaultSkills": ["01", "02", "03", "10"],
+  "skills": [
+    {
+      "id": "01",
+      "name": "scope",
+      "keywords": ["azure functions", "function app", "isolated worker", ".net 10"]
+    },
+    {
+      "id": "02",
+      "name": "tech-stack",
+      "keywords": ["openapi", "application insights", "telemetry", "ilogger", "polly", "fluentvalidation", "xunit", "fluentassertions"]
+    },
+    {
+      "id": "03",
+      "name": "architecture-rules",
+      "keywords": ["clean architecture", "cqrs", "mediatr", "feature folder", "domain", "application layer", "infrastructure", "key vault", "managed identity", "directory.build.props", "directory.build.targets"]
+    },
+    {
+      "id": "04",
+      "name": "configuration",
+      "keywords": ["appsettings", "configuration", "environment variables", "settings", "key vault secret", "development.json", "production config"]
+    },
+    {
+      "id": "05",
+      "name": "validation",
+      "keywords": ["validation", "validate", "validator", "fluentvalidation", "request rules", "payload validation", "input validation"]
+    },
+    {
+      "id": "06",
+      "name": "retry-resiliency",
+      "keywords": ["retry", "retries", "resiliency", "resilience", "polly", "transient fault", "backoff", "onretry"]
+    },
+    {
+      "id": "07",
+      "name": "testing",
+      "keywords": ["test", "tests", "testing", "unit test", "integration test", "webapplicationfactory", "fluentassertions", "xunit"]
+    },
+    {
+      "id": "08",
+      "name": "coverage-ci",
+      "keywords": ["coverage", "coverlet", "sonarqube", "pipeline", "ci", "azure devops", "build validation"]
+    },
+    {
+      "id": "09",
+      "name": "security-standards",
+      "keywords": ["security", "regex", "timeout", "redos", "secret", "security hotspot"]
+    },
+    {
+      "id": "10",
+      "name": "output-target",
+      "keywords": ["output", "generated code", "target folder", "destination", "write to"]
+    }
+  ]
+}
