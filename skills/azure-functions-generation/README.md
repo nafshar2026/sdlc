@@ -2,6 +2,26 @@
 
 This folder contains modular instruction files for generating a .NET 10 Azure Functions solution.
 
+## Start Here
+
+Pull the repository first:
+
+```powershell
+git clone https://github.com/nafshar2026/sdlc.git
+cd sdlc
+```
+
+Then follow this end-to-end flow:
+1. Create a new requirements file from `artifacts/requirements-template.txt`.
+2. Set the output folder in that requirements file to a team-specific path such as `./generated/customer-docs-func`.
+3. Run `./skills/azure-functions-generation/scripts/load_skills.ps1` to auto-select and merge the relevant skills.
+4. Run `./skills/azure-functions-generation/scripts/prepare_generation_prompt.ps1` to build the final generation prompt.
+5. Send the generated prompt file to your code generation tool or coding agent.
+6. Find the generated Azure Functions solution in the output folder named in the requirements file.
+7. Build and test the generated solution.
+
+For the full detailed walkthrough, see `./docs/STEP-BY-STEP.md`.
+
 ## Load Order
 - ./LOAD-ORDER.md
 
@@ -20,6 +40,7 @@ This folder contains modular instruction files for generating a .NET 10 Azure Fu
 ## Workflow Docs
 - ./docs/STEP-BY-STEP.md
 - ../../artifacts/requirements-template.txt
+- ../../artifacts/sample-requirements.txt
 
 ## PowerShell Examples
 
@@ -74,17 +95,25 @@ python ./skills/azure-functions-generation/scripts/load_skills.py --requirements
 ```
 
 ## Typical Automation Flow
-1. Save incoming requirements to a text file or pass them inline.
-2. Run one of the loader scripts to build a merged skills context file.
-3. Optionally run ./scripts/prepare_generation_prompt.ps1 to build a single generation prompt file.
-4. Send both the raw requirements and the merged skills context, or the single generation prompt file, to the code generation step.
-5. Generate the Azure Functions solution.
-6. Run tests and validation.
+1. Pull this repo locally with `git clone`.
+2. Create a project-specific requirements file from `artifacts/requirements-template.txt`.
+3. Set the target output folder name in that requirements file.
+4. Run one of the loader scripts to build a merged skills context file.
+5. Run `./scripts/prepare_generation_prompt.ps1` to produce the final generation prompt.
+6. Use the generated prompt as-is in the code generation step (do not manually edit it for normal runs).
+7. Generate the Azure Functions solution in the folder named in the requirements file.
+8. Run tests and validation on the generated solution.
 
 ## Important Notes
 - LOAD-ORDER.md is only a manifest and does not load files by itself.
 - Skills are loaded only when your automation explicitly runs one of the loader scripts.
 - Auto-selection is heuristic and keyword-based; update ./SKILL-MAP.json when your requirement language changes.
+- The generation prompt is an auto-generated artifact. Keep it unmodified for normal runs.
+- If recurring prompt adjustments are needed, update the requirements template, skill files, or prompt builder script instead of hand-editing each generated prompt.
+- `generated/sample-azure-functions` is a committed sample output for reference.
+- `generated/sample-azure-functions/README.md` is generated project documentation produced as part of the sample output.
+- Future team-generated projects should also contain their own generated `README.md` in the target output folder.
+- Future team-generated projects should use their own folder names under `./generated/`.
 
 ## Core
 - ./core/SKILL-01-scope.md
