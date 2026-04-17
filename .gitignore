@@ -33,6 +33,8 @@ TestResults/
 generated/*
 !generated/sample-azure-functions/
 !generated/sample-azure-functions/**
+generated/sample-azure-functions/**/bin/
+generated/sample-azure-functions/**/obj/
 
 # Keep sample requirements in artifacts, but ignore transient generated artifacts by default
 artifacts/*.auto.md
